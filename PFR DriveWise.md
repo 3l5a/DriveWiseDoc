@@ -82,38 +82,46 @@ CDA Frontend : jeudi 6 juin >  vendredi 14 juin
 - [ ] ReadByBrand : id, name
 
 ## Motor
-- [ ] Create (admin)
-- [ ] Read
-- [ ] ReadAll
-- [ ] Update (admin)
+- [ ] Create (admin) : id, type
+- [ ] Read : id, type
+- [ ] ReadAll : id, type
+- [ ] Update (admin) : id, type
 - [ ] Delete (admin)
 
 ## Rental
-- [ ] Create
-- [ ] Update
-- [ ] Read
-- [ ] ReadAll (?)
-- [ ] ReadByUser
-- [ ] ReadByDate
-- [ ] ReadByUserAndDate
+- [ ] Create  : vehicleId, collaboratorId, StartDateId, EndDateId
+- [ ] Update : verif pas de covoit + vérif dates ok : vehicleId, collaboratorId, StartDateId, EndDateId
+- [ ] Read : vehicleId, collaboratorId, StartDateId, EndDateId
+- [ ] ReadAll (?) : vehicleId, collaboratorId, StartDateId, EndDateId
+	- [ ] ReadByUser : vehicleId, collaboratorId, StartDateId, EndDateId
+	- [ ] ReadByDate : vehicleId, collaboratorId, StartDateId, EndDateId
+	- [ ] ReadByUserAndDate : vehicleId, collaboratorId, StartDateId, EndDateId
 
 ## Status
-- [ ] Create (admin)
-- [ ] Read (admin)
-- [ ] ReadAll (admin)
-- [ ] Update
+- [ ] Create (admin) : id, name
+- [ ] Read (admin) : id, name
+- [ ] ReadAll (admin) : id, name
+- [ ] Update : id, name
 - [ ] Delete
 
 ## Vehicle
-- [ ] Create (admin)
-- [ ] Read
-- [ ] ReadAll
-- [ ] Update (admin)
+- [ ] Create (admin) : registration, totalseats, co2emissionkm, motorid, categoryId, ModelId
+- [ ] ReadAdmin : + id, **statusid** : verif plages de réservations
+- [ ] ReadCollab :  + id
+- [ ] ReadAllCollab : verif dispo : +id
+	- [ ] ReadAllAdmin : +id, **statusid**
+- [ ] Update (admin) :  +id, **statusid**
+- [ ] UpdateStatus : +id, statusId
 - [ ] Delete (admin)
 - [ ] ReadBy :
-	- [ ] Status (admin)
-	- [ ] Model
-	- [ ] Brand
-	- [ ] Motor.Type
-	- [ ] Category
-	- [ ] Address
+	- [ ] Status (admin) : +id, **statusid**
+	- [ ] Model : +id
+		- [ ] ModelAdmin : +id, **statusid**
+	- [ ] Brand : +id
+		- [ ] BrandAdmin : +id, **statusid**
+	- [ ] Motor.Type : +id
+		- [ ] MotorTypeAdmin : +id, **statusid**
+	- [ ] Category : +id
+		- [ ] CategoryAdmin : +id, **statusid**
+	- [ ] Address : +id
+		- [ ] AddressAdmin : +id, **statusid**
